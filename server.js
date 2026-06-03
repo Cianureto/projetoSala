@@ -1,10 +1,10 @@
 const express = require('express');
-const parth = require('path');
+const path = require('path');
 
 const app = express();
 const PORT = 3000;
 
-app.use(express.static(parth.join(__dirname, 'src/public')));
+app.use(express.static(path.join(__dirname, 'src/public')));
 
 app.get('/api', (req, res) => {
     res.json({ message: 'Hello World' });
